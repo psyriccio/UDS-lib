@@ -31,5 +31,9 @@ public class ServerResponce implements Serializable {
             this.data = ex.getMessage().getBytes();
         }
     }
+
+    public byte[] getData() {
+        return data;
+    }
     
 }
