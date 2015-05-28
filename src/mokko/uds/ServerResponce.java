@@ -34,6 +34,12 @@ public class ServerResponce implements Serializable {
         this.data = data;
         this.statusCode = statusCode;
     }
+
+    public ServerResponce(StatusCode statusCode, byte[] data) {
+        mediaType = "text/plain";
+        this.data = data;
+        this.statusCode = statusCode.getCode();
+    }
     
     public ServerResponce(String mediaType, byte[] data) {
         this.mediaType = mediaType;
@@ -45,6 +51,12 @@ public class ServerResponce implements Serializable {
         this.mediaType = mediaType;
         this.data = data;
         this.statusCode = statusCode;
+    }
+
+    public ServerResponce(StatusCode statusCode, String mediaType, byte[] data) {
+        this.mediaType = mediaType;
+        this.data = data;
+        this.statusCode = statusCode.getCode();
     }
     
     public ServerResponce(String data) {
@@ -66,7 +78,17 @@ public class ServerResponce implements Serializable {
         }
         this.statusCode = statusCode;
     }
-    
+
+    public ServerResponce(StatusCode statusCode, String data) {
+        mediaType = "text/plain";
+        try {
+            this.data = data.getBytes("UTF-8");
+        } catch (UnsupportedEncodingException ex) {
+            this.data = ex.getMessage().getBytes();
+        }
+        this.statusCode = statusCode.getCode();
+    }
+
     public byte[] getData() {
         return data;
     }
@@ -85,6 +107,10 @@ public class ServerResponce implements Serializable {
 
     public void setStatusCode(int statusCode) {
         this.statusCode = statusCode;
+    }
+
+    public void setStatusCode(StatusCode statusCode) {
+        this.statusCode = statusCode.getCode();
     }
     
 }
