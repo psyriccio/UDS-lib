@@ -17,6 +17,6 @@ public interface IServer {
     public boolean isMessageAvailable(String sessionKey);
     public Message popMessage(String sessionKey);
     public Message[] popAllMessages(String sessionKey);
-    public void sendMessage(String sesionKey, Object message);
+    public void sendMessage(String sesionKey, Message message);
     
 }
