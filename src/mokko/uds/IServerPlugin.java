@@ -14,7 +14,7 @@ public interface IServerPlugin {
     public String getName();
     public String getDescription();
     
-    public void init(IServer server);
+    public void init(IServer server, String sessionKey);
     public void done(IServer server);
     
     public ServerResponce get(String Uri);
