@@ -17,7 +17,7 @@ public interface IServerPlugin {
     public void init(IServer server, String sessionKey);
     public void done(IServer server);
     
-    public ServerResponce get(String Uri);
-    public ServerResponce post(String Uri);
+    public ServerResponce get(String Uri, ISession session);
+    public ServerResponce post(String Uri, ISession session);
     
 }
