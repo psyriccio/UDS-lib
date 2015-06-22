@@ -13,5 +13,6 @@ public interface IPluginDescriptor {
 
     public String getName();
     public String getDescription();
+    public String getURLPrefix();
     
 }
