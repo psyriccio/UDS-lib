@@ -20,4 +20,6 @@ public interface IServer {
     public void sendMessage(String sesionKey, Message message);
     public void log(String message);
     
+    public IServerManager getServerManager();
+    
 }
