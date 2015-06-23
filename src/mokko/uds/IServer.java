@@ -19,6 +19,7 @@ public interface IServer {
     public Message[] popAllMessages(String sessionKey);
     public void sendMessage(String sesionKey, Message message);
     public void log(String message);
+    public String resolveName(String id);
     
     public IServerManager getServerManager();
     
