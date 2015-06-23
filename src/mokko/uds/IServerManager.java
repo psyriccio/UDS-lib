@@ -15,4 +15,20 @@ public interface IServerManager {
     
     public List<IPluginDescriptor> getPluginsDescriptors();
     
+    //OS MXBean
+    public String getArch();
+    public int getAvailableProcessors();
+    public String getOSName();
+    public double getSystemLoadAverage();
+    public String getOSVersion();
+    
+    //Runtime MXBean
+    public String getVMName();
+    public String getVMSpecName();
+    public String getVMSpecVendor();
+    public String getVMSpecVersion();
+    public String getVMImplName();
+    public String getVMImplVendor();
+    public String getVMImplVersion();
+    
 }
