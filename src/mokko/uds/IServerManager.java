@@ -15,6 +15,7 @@ public interface IServerManager {
     
     public List<IPluginDescriptor> getPluginsDescriptors();
     public void unloadPlugin(String urlPrefix);
+    public void reloadPlugin(String urlPrefix);
     
     //OS MXBean
     public String getArch();
